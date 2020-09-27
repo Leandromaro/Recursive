@@ -13,7 +13,29 @@ For example, consider the SudoKo solving Problem, we try filling digits one by o
 
 ## Excercises 
 
-```
+### Find all posible number combinations that match a given numer
 
+```
+    public static void main(String[] args) {
+        int n = 4;
+        ArrayList<Integer> numeros = new ArrayList<>();
+        combinacionesSuma(4, numeros,0);
+    }
+
+    public static void combinacionesSuma(int numero, ArrayList<Integer> numeros, int suma){
+        if(suma == numero){ // Base Case
+            System.out.println(numeros);
+        }else { // Recursive Case
+            for (int i = 1; i<=numero; i++){
+                suma += i;
+                if (suma <= numero){
+                    numeros.add(i);
+                    combinacionesSuma(numero,numeros,suma);
+                    numeros.remove(numeros.indexOf(i));
+                }
+                suma -= i;
+            }
+        }
+    }
 
 ```
