@@ -13,7 +13,11 @@ For example, consider the SudoKo solving Problem, we try filling digits one by o
 
 ## Excercises 
 
-### Find all posible number combinations that match a given number
+### Find all posible number combinations that match a given number 
+
+Example: Find all the combinations that sum up to 10
+
+![sum](https://upload.wikimedia.org/wikipedia/commons/b/bb/Branch%26bound_low.jpg)
 
 ```
     public static void main(String[] args) {
