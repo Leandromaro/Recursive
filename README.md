@@ -2,7 +2,7 @@
 
 Backtracking is an algorithmic-technique for solving problems recursively by trying to build a solution incrementally, one piece at a time, removing those solutions that fail to satisfy the constraints of the problem at any point of time (by time, here, is referred to the time elapsed till reaching any level of the search tree).
 
-Basic idea: **FIND ALL POSIBLE COMBINATIONS**
+Basic idea: **FIND ALL POSIBLE COMBINATIONS**. When an element its found we "backtrack" erasing that element and continuing analizing other cases.
 Like every recursive algorithm it counts with two elements
  - Base case
  - Recursive case
