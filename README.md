@@ -4,20 +4,24 @@ Backtracking is an algorithmic-technique for solving problems recursively by try
 
 Basic idea: **FIND ALL POSIBLE COMBINATIONS**. When an element its found we "backtrack" erasing that element and continuing analizing other cases.
 Like every recursive algorithm it counts with two elements
+
  - Base case
  - Recursive case
+ 
+Essentially, the idea is to find the best possible match at any given time, which is why this type of algorithm is said to be an in-depth search. During the search, if a wrong alternative is found, the search *goes back to the previous step* and takes the next alternative. When the possibilities have been finished, the previous choice is returned and the next option is taken (child [if we refer to a tree]). If there are no more alternatives the search fails. In this way, an implicit tree is created, in which each node is a state of the solution (partial solution in the case of interior nodes or total solution in the case of leaf nodes).
+
 
 For example, consider the SudoKo solving Problem, we try filling digits one by one. Whenever we find that current digit cannot lead to a solution, we remove it (backtrack) and try next digit. This is better than naive approach (generating all possible combinations of digits and then trying every combination one by one) as it drops a set of permutations whenever it backtracks.
 
 ![Sodoku](https://media.geeksforgeeks.org/wp-content/uploads/sudoku.jpg)
 
-## Excercises 
-
-### Find all posible number combinations that match a given number 
-
 Example: Find all the combinations that sum up to 10
 
 ![sum](https://upload.wikimedia.org/wikipedia/commons/b/bb/Branch%26bound_low.jpg)
+
+## Excercises 
+
+### Find all posible number combinations that match a given number 
 
 ```
     public static void main(String[] args) {
