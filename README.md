@@ -15,7 +15,6 @@ For example, consider the SudoKo solving Problem, we try filling digits one by o
 
 ![Sodoku](https://media.geeksforgeeks.org/wp-content/uploads/sudoku.jpg)
 
-Example: 
 
 ## Excercises 
 
