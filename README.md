@@ -43,7 +43,7 @@ For example, consider the SudoKo solving Problem, we try filling digits one by o
 ### Find all posible *Ip combination* given a String
 
 ```
-public static int solution(String S) {
+    public static int solution(String S) {
         List<String> allIpAddresses = new ArrayList<>();
         int[] path = new int[4];
         snapshotIp(allIpAddresses, S, 0, path, 0);
