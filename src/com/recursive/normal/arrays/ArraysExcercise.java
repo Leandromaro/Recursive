@@ -1,6 +1,6 @@
-package com.company.arrays;
+package com.recursive.normal.arrays;
 
-public class Arrays {
+public class ArraysExcercise {
 
     /*
         Problem:

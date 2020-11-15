@@ -1,4 +1,4 @@
-package com.company.matrix;
+package com.recursive.normal.matrix;
 
 public class Matrix {
 

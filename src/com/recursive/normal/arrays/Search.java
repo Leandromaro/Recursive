@@ -1,4 +1,4 @@
-package com.company.arrays;
+package com.recursive.normal.arrays;
 
 public class Search {
 

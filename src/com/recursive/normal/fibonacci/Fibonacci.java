@@ -1,4 +1,4 @@
-package com.company.fibonacci;
+package com.recursive.normal.fibonacci;
 
 public class Fibonacci {
 

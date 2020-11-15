@@ -1,4 +1,4 @@
-package com.company.recursiveSum;
+package com.recursive.normal.recursiveSum;
 
 public class Combination {
 
