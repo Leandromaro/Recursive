@@ -7,13 +7,13 @@ public class Combinations {
 
     /*
         Problem:
-        find the max value
+        find the values that combined sums the given number
      */
 
     public static void main(String[] args) {
-        int[] array = {1, -2, 9, 21, 7, 6, 5, 6, 7, 7, 8};
+        int[] array = {9, 2, -5, -7, -4,11,33,21};
         LinkedList integers = Arrays.stream(array).boxed().collect(Collectors.toCollection(LinkedList::new));
-        findValueToSearchCombination(integers, 0, 5, new LinkedList<>(), 0);
+        findValueToSearchCombination(integers, 0, 9, new LinkedList<>(), 0);
     }
 
     public static void findValueToSearchCombination(List<Integer> integers,
@@ -22,17 +22,19 @@ public class Combinations {
                                                     LinkedList<Integer> comb,
                                                     int index) {
 
+        List<Integer> noDuplicates = new ArrayList<>(new HashSet<>(integers));
+
         if (sum == valueToSearch) {
             System.out.println(comb);
         } else {
-            for (int i = index; i < integers.size(); i++) {
-                Integer value = integers.get(i);
+            for (int i = index; i < noDuplicates.size(); i++) {
+                Integer value = noDuplicates.get(i);
                 // Add
                 sum = sum + value;
                 // Recursive
-                if (sum <= valueToSearch && !comb.contains(value)) {
+                if (!comb.contains(value)) {
                     comb.add(value);
-                    findValueToSearchCombination(integers, sum, valueToSearch, comb, (index + 1));
+                    findValueToSearchCombination(noDuplicates, sum, valueToSearch, comb, (index + 1));
                     comb.remove(value);
                 }
                 // Remove
